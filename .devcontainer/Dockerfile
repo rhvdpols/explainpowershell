@@ -2,8 +2,8 @@
 
 # Base Dotnet SDK version: 3.1
 ARG NET_SDK="3.1"
-ARG ADDITIONAL_NET_SDK="6.0"
 FROM mcr.microsoft.com/vscode/devcontainers/dotnet:0-${NET_SDK}
+ARG ADDITIONAL_NET_SDK="6.0"
 
 # Install Azure CLI
 COPY library-scripts/*.sh library-scripts/*.env /tmp/library-scripts/
